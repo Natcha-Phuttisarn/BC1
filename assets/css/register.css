@@ -1,0 +1,827 @@
+/* register.css
+   ไฟล์นี้ใช้สำหรับตกแต่งหน้าสมัครสมาชิก Bizcomp Club
+*/
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.register-page {
+    padding: 55px 0 80px;
+    background: #f5f8fc;
+    font-family: "Prompt", sans-serif;
+}
+
+.register-container {
+    width: min(980px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.register-page-heading {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.register-page-heading > span {
+    color: #1768cf;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.register-page-heading h1 {
+    margin: 6px 0 7px;
+    color: #173f6e;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.register-page-heading p {
+    margin: 0;
+    color: #8191a3;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   STEPS
+========================================= */
+
+.register-steps {
+    max-width: 650px;
+    margin: 0 auto 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-step {
+    color: #59748f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+}
+
+.register-step div {
+    width: 37px;
+    height: 37px;
+
+    border-radius: 50%;
+
+    background: #1768cf;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.register-step span {
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.step-line {
+    width: 95px;
+    height: 1px;
+
+    margin: 0 15px 23px;
+
+    background: #ced9e5;
+}
+
+
+/* =========================================
+   ALERT
+========================================= */
+
+.register-alert {
+    margin-bottom: 20px;
+    padding: 15px 17px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+.register-alert.error {
+    background: #fff1f1;
+    border: 1px solid #f1cccc;
+    color: #ad4141;
+}
+
+.register-alert > i {
+    margin-top: 4px;
+}
+
+.register-alert strong,
+.register-alert span {
+    display: block;
+}
+
+.register-alert strong {
+    font-size: 11px;
+}
+
+.register-alert span {
+    margin-top: 2px;
+    font-size: 10px;
+}
+
+.register-alert a {
+    margin-top: 7px;
+    color: #1768cf;
+    display: inline-block;
+    font-size: 9.5px;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.register-section {
+    margin-bottom: 22px;
+    padding: 27px;
+
+    scroll-margin-top: 110px;
+
+    border: 1px solid #e0e7ef;
+    border-radius: 17px;
+
+    background: #fff;
+
+    box-shadow:
+        0 7px 25px
+        rgba(25, 60, 100, .045);
+}
+
+.register-section-header {
+    margin-bottom: 23px;
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #e8edf3;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.section-number {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1768cf,
+            #0d4e9d
+        );
+
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.register-section-header span {
+    color: #1768cf;
+    font-size: 7.5px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.register-section-header h2 {
+    margin: 2px 0 1px;
+    color: #294b70;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.register-section-header p {
+    margin: 0;
+    color: #8c9aaa;
+    font-size: 9px;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.register-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+
+.register-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.register-group.full {
+    grid-column: 1 / -1;
+}
+
+.register-group label {
+    color: #455f7a;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.register-group label > span {
+    color: #d34d4d;
+}
+
+.register-group input,
+.register-group select {
+    width: 100%;
+    height: 45px;
+
+    padding: 0 13px;
+
+    border: 1px solid #d9e2ec;
+    border-radius: 9px;
+
+    background: #fff;
+    color: #425c77;
+
+    font-family: "Prompt", sans-serif;
+    font-size: 10px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: .2s;
+}
+
+.register-group input:focus,
+.register-group select:focus {
+    border-color: #1768cf;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(23, 104, 207, .07);
+}
+
+.register-group small {
+    color: #98a6b5;
+    font-size: 8px;
+}
+
+
+/* =========================================
+   PASSWORD
+========================================= */
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 44px;
+}
+
+.password-toggle {
+    width: 40px;
+    height: 43px;
+
+    position: absolute;
+    top: 1px;
+    right: 1px;
+
+    border: 0;
+    background: transparent;
+
+    color: #8596a8;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   ACCOUNT NOTICE
+========================================= */
+
+.account-notice {
+    margin-bottom: 20px;
+    padding: 13px 15px;
+
+    border: 1px solid #d6e5f6;
+    border-radius: 11px;
+
+    background: #f3f8fe;
+
+    color: #426787;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.account-notice > i {
+    margin-top: 3px;
+    color: #1768cf;
+}
+
+.account-notice strong {
+    color: #31597e;
+    font-size: 10px;
+}
+
+.account-notice p {
+    margin: 2px 0 3px;
+    font-size: 9px;
+}
+
+.account-notice a {
+    color: #1768cf;
+    font-size: 9px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.membership-price {
+    margin-bottom: 22px;
+    padding: 18px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0c3975,
+            #1768cf
+        );
+
+    color: #fff;
+
+    text-align: center;
+}
+
+.membership-price > span {
+    display: block;
+    font-size: 9px;
+    opacity: .82;
+}
+
+.membership-price > strong {
+    margin: 3px 0;
+
+    display: block;
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.membership-price strong small {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.membership-price p {
+    margin: 0;
+    font-size: 8.5px;
+    opacity: .75;
+}
+
+
+/* =========================================
+   PAYMENT
+========================================= */
+
+.payment-layout {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 18px;
+}
+
+.payment-qr-card,
+.payment-account-card {
+    padding: 20px;
+
+    border: 1px solid #e0e7ef;
+    border-radius: 13px;
+
+    background: #fafdff;
+}
+
+.payment-label {
+    color: #1768cf;
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.payment-qr-card h3,
+.payment-account-card h3 {
+    margin: 4px 0 15px;
+    color: #355777;
+    font-size: 13px;
+}
+
+.payment-qr {
+    width: 180px;
+    height: 180px;
+
+    margin: 0 auto 12px;
+
+    border: 1px solid #e0e6ed;
+    border-radius: 12px;
+
+    background: #fff;
+
+    overflow: hidden;
+}
+
+.payment-qr img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.payment-qr.empty {
+    color: #9ba9b6;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 9px;
+}
+
+.payment-qr.empty i {
+    color: #c4cfdb;
+    font-size: 52px;
+}
+
+.payment-qr-card > p {
+    margin: 0;
+    color: #697d91;
+    font-size: 9px;
+    text-align: center;
+}
+
+.payment-account-row {
+    min-height: 43px;
+
+    border-bottom: 1px solid #e7ecf2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.payment-account-row span {
+    color: #8796a6;
+    font-size: 9px;
+}
+
+.payment-account-row strong {
+    color: #3f5c79;
+    font-size: 9.5px;
+    text-align: right;
+}
+
+.payment-method {
+    margin-top: 18px;
+}
+
+
+/* =========================================
+   SLIP
+========================================= */
+
+.slip-section {
+    margin-top: 22px;
+}
+
+.slip-heading {
+    margin-bottom: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slip-heading > div > span {
+    color: #1768cf;
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.slip-heading h3 {
+    margin: 3px 0 0;
+    color: #395a7b;
+    font-size: 12px;
+}
+
+.slip-heading h3 b {
+    color: #d34d4d;
+}
+
+.slip-heading > strong {
+    color: #1768cf;
+    font-size: 12px;
+}
+
+.slip-upload {
+    min-height: 180px;
+    padding: 16px;
+
+    border: 2px dashed #cfdce9;
+    border-radius: 13px;
+
+    background: #fbfdff;
+
+    display: block;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition: .2s;
+}
+
+.slip-upload:hover {
+    border-color: #1768cf;
+    background: #f5f9fe;
+}
+
+.slip-upload > input {
+    display: none;
+}
+
+.slip-placeholder {
+    min-height: 145px;
+
+    color: #8394a6;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    text-align: center;
+}
+
+.slip-placeholder i {
+    color: #1768cf;
+    font-size: 27px;
+}
+
+.slip-placeholder strong {
+    color: #54708d;
+    font-size: 10px;
+}
+
+.slip-placeholder span {
+    font-size: 8px;
+}
+
+.slip-preview {
+    text-align: center;
+}
+
+.slip-preview img {
+    max-width: 100%;
+    max-height: 330px;
+
+    border-radius: 10px;
+
+    object-fit: contain;
+}
+
+.slip-preview > span {
+    margin-top: 7px;
+    color: #7c8da0;
+    display: block;
+    font-size: 8px;
+}
+
+.slip-file-preview {
+    min-height: 145px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+}
+
+.slip-file-preview i {
+    color: #cf4d4d;
+    font-size: 35px;
+}
+
+.slip-file-preview strong {
+    color: #4a647e;
+    font-size: 9px;
+}
+
+.slip-file-preview span {
+    color: #8d9baa;
+    font-size: 8px;
+}
+
+
+/* =========================================
+   CONFIRM
+========================================= */
+
+.register-confirm {
+    margin-top: 20px;
+    padding: 14px 15px;
+
+    border: 1px solid #dbe5ef;
+    border-radius: 10px;
+
+    background: #f8fbfe;
+
+    color: #63798f;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.register-confirm input {
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   ACTION
+========================================= */
+
+.register-actions {
+    margin-top: 5px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+.register-secondary-btn,
+.register-primary-btn {
+    min-height: 45px;
+    padding: 0 19px;
+
+    border-radius: 9px;
+
+    font-family: "Prompt", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+}
+
+.register-secondary-btn {
+    border: 1px solid #d5dee8;
+    background: #fff;
+    color: #667c92;
+}
+
+.register-primary-btn {
+    border: 0;
+    background: #1768cf;
+    color: #fff;
+    cursor: pointer;
+}
+
+.register-primary-btn:hover {
+    background: #0e57b2;
+}
+
+.register-primary-btn:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
+.register-login-bottom {
+    margin-top: 19px;
+    color: #8493a3;
+    font-size: 9px;
+    text-align: center;
+}
+
+.register-login-bottom a {
+    color: #1768cf;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .register-grid,
+    .payment-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .register-group.full {
+        grid-column: auto;
+    }
+
+    .register-step span {
+        display: none;
+    }
+
+    .step-line {
+        width: 55px;
+        margin-bottom: 0;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .register-page {
+        padding: 40px 0 55px;
+    }
+
+    .register-container {
+        width: calc(100% - 25px);
+    }
+
+    .register-section {
+        padding: 20px 16px;
+    }
+
+    .register-page-heading h1 {
+        font-size: 24px;
+    }
+
+    .payment-qr {
+        width: 160px;
+        height: 160px;
+    }
+
+    .register-actions {
+        flex-direction: column-reverse;
+    }
+
+    .register-secondary-btn,
+    .register-primary-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}

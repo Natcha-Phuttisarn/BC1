@@ -1,0 +1,669 @@
+/* header.css
+   ไฟล์นี้ใช้สำหรับตกแต่ง Header และเมนูหลักของ Bizcomp Club
+*/
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.bc-header {
+    width: 100%;
+    height: 90px;
+    position: relative;
+    z-index: 1000;
+    background: linear-gradient(90deg, #062d67, #083f86);
+    font-family: "Prompt", sans-serif;
+}
+
+.bc-header-container {
+    width: min(1400px, calc(100% - 70px));
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.bc-brand {
+    flex-shrink: 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+}
+
+.bc-brand-logo {
+    width: 54px !important;
+    height: 54px !important;
+    max-width: 54px !important;
+    min-width: 54px !important;
+    display: block;
+    object-fit: contain;
+}
+
+.bc-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.bc-brand-text strong {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bc-brand-text span {
+    margin-top: 4px;
+    color: rgba(255, 255, 255, .72);
+    font-size: 7.5px;
+}
+
+
+/* =========================================
+   NAV AREA
+========================================= */
+
+.bc-nav-area {
+    min-width: 0;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.bc-nav {
+    height: 90px;
+    display: flex;
+    align-items: stretch;
+    gap: 2px;
+}
+
+
+/* =========================================
+   NAV LINK
+========================================= */
+
+.bc-nav-link,
+.bc-dropdown-btn {
+    height: 90px;
+    padding: 0 15px;
+    position: relative;
+    border: 0;
+    background: transparent;
+    color: rgba(255, 255, 255, .88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-family: "Prompt", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.bc-nav-link:hover,
+.bc-dropdown-btn:hover {
+    color: #ffffff;
+}
+
+
+/* เส้นสีเหลืองใต้เมนู */
+
+.bc-nav-link::after,
+.bc-dropdown-btn::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    border-radius: 999px;
+    background: #ffc928;
+    transform: translateX(-50%);
+    transition: width .2s ease;
+}
+
+.bc-nav-link:hover::after,
+.bc-nav-link.active::after,
+.bc-dropdown.active .bc-dropdown-btn::after {
+    width: 32px;
+}
+
+.bc-nav-link.active,
+.bc-dropdown.active .bc-dropdown-btn {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   ABOUT DROPDOWN
+========================================= */
+
+.bc-dropdown {
+    height: 90px;
+    position: relative;
+}
+
+.bc-dropdown-btn > i {
+    font-size: 7px;
+    transition: transform .2s ease;
+}
+
+.bc-dropdown.open .bc-dropdown-btn > i {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   DROPDOWN MENU
+========================================= */
+
+.bc-dropdown-menu {
+    width: 290px;
+    padding: 8px;
+    position: absolute;
+    top: calc(100% - 7px);
+    left: 50%;
+    z-index: 1200;
+    border: 1px solid #e3eaf2;
+    border-radius: 14px;
+    background: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, -8px);
+    box-shadow: 0 18px 45px rgba(7, 37, 75, .18);
+    transition:
+        opacity .18s ease,
+        visibility .18s ease,
+        transform .18s ease;
+}
+
+.bc-dropdown.open .bc-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+
+/* เมนูย่อย */
+
+.bc-dropdown-menu > a {
+    min-height: 62px;
+    padding: 9px 10px;
+    border-radius: 10px;
+    color: #3a5878;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: background .15s ease;
+}
+
+.bc-dropdown-menu > a:hover,
+.bc-dropdown-menu > a.current {
+    background: #f0f6fd;
+}
+
+.bc-sub-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: #eaf3ff;
+    color: #1768cf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.bc-dropdown-menu strong {
+    display: block;
+    color: #294b70;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.bc-dropdown-menu span {
+    display: block;
+    margin-top: 3px;
+    color: #929eac;
+    font-size: 7.5px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ACCOUNT
+========================================= */
+
+.bc-account {
+    flex-shrink: 0;
+}
+
+
+/* Login */
+
+.bc-login-btn {
+    min-height: 43px;
+    padding: 0 16px;
+    border: 1px solid rgba(255, 255, 255, .45);
+    border-radius: 9px;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 9.5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.bc-login-btn:hover {
+    background: rgba(255, 255, 255, .08);
+    border-color: #ffffff;
+}
+
+
+/* =========================================
+   USER DROPDOWN
+========================================= */
+
+.bc-user {
+    position: relative;
+}
+
+.bc-user-btn {
+    min-height: 46px;
+    padding: 4px 10px 4px 5px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .06);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Prompt", sans-serif;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.bc-user-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: #1768cf;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.bc-user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bc-user-btn > i {
+    margin-left: 2px;
+    font-size: 7px;
+    transition: transform .2s ease;
+}
+
+.bc-user.open .bc-user-btn > i {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   USER MENU
+========================================= */
+
+.bc-user-menu {
+    width: 210px;
+    padding: 7px;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 1200;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-7px);
+    box-shadow: 0 16px 40px rgba(7, 37, 75, .17);
+    transition:
+        opacity .18s ease,
+        visibility .18s ease,
+        transform .18s ease;
+}
+
+.bc-user.open .bc-user-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.bc-user-menu a {
+    min-height: 40px;
+    padding: 0 10px;
+    border-radius: 8px;
+    color: #4e6681;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 8.5px;
+    text-decoration: none;
+}
+
+.bc-user-menu a i {
+    width: 16px;
+    color: #3476c5;
+    text-align: center;
+}
+
+.bc-user-menu a:hover {
+    background: #f2f6fb;
+    color: #1768cf;
+}
+
+.bc-user-divider {
+    height: 1px;
+    margin: 5px 7px;
+    background: #e8edf3;
+}
+
+.bc-user-menu a.bc-logout {
+    color: #c85050;
+}
+
+.bc-user-menu a.bc-logout i {
+    color: #c85050;
+}
+
+
+/* =========================================
+   MOBILE BUTTON
+========================================= */
+
+.bc-mobile-btn {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    border: 1px solid rgba(255, 255, 255, .22);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .06);
+    color: #ffffff;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .bc-header-container {
+        width: calc(100% - 40px);
+    }
+
+    .bc-nav-area {
+        gap: 10px;
+    }
+
+    .bc-nav-link,
+    .bc-dropdown-btn {
+        padding: 0 10px;
+        font-size: 9px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .bc-header {
+        height: 76px;
+    }
+
+    .bc-header-container {
+        width: calc(100% - 26px);
+    }
+
+    .bc-brand-logo {
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px !important;
+        max-width: 46px !important;
+    }
+
+    .bc-brand-text strong {
+        font-size: 12px;
+    }
+
+    .bc-brand-text span {
+        font-size: 7px;
+    }
+
+    .bc-mobile-btn {
+        display: flex;
+    }
+
+    .bc-nav-area {
+        width: min(330px, calc(100vw - 30px));
+        max-height: calc(100vh - 95px);
+        padding: 12px;
+
+        position: absolute;
+        top: 76px;
+        right: 13px;
+
+        overflow-y: auto;
+
+        border: 1px solid #e1e8f0;
+        border-radius: 14px;
+
+        background: #ffffff;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 10px;
+
+        box-shadow: 0 18px 45px rgba(7, 37, 75, .18);
+    }
+
+    .bc-nav-area.open {
+        display: flex;
+    }
+
+    .bc-nav {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+    .bc-nav-link,
+    .bc-dropdown-btn {
+        width: 100%;
+        height: 45px;
+
+        padding: 0 12px;
+
+        border-radius: 9px;
+
+        color: #46617f;
+
+        justify-content: flex-start;
+
+        font-size: 9.5px;
+    }
+
+    .bc-nav-link:hover,
+    .bc-dropdown-btn:hover,
+    .bc-nav-link.active,
+    .bc-dropdown.active .bc-dropdown-btn {
+        background: #f0f6fd;
+        color: #1768cf;
+    }
+
+    .bc-nav-link::after,
+    .bc-dropdown-btn::after {
+        display: none;
+    }
+
+    .bc-dropdown {
+        width: 100%;
+        height: auto;
+    }
+
+    .bc-dropdown-btn {
+        justify-content: space-between;
+    }
+
+    .bc-dropdown-menu {
+        width: 100%;
+
+        margin-top: 4px;
+        padding: 5px;
+
+        position: static;
+
+        border: 0;
+
+        box-shadow: none;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        display: none;
+
+        transform: none;
+    }
+
+    .bc-dropdown.open .bc-dropdown-menu {
+        display: block;
+        transform: none;
+    }
+
+    .bc-dropdown-menu > a {
+        min-height: 55px;
+    }
+
+    .bc-account {
+        width: 100%;
+    }
+
+    .bc-login-btn {
+        width: 100%;
+        min-height: 44px;
+
+        border-color: #d5e0ec;
+
+        background: #1768cf;
+
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+    .bc-user {
+        width: 100%;
+    }
+
+    .bc-user-btn {
+        width: 100%;
+        min-height: 48px;
+
+        border-color: #dfe6ef;
+
+        background: #f6f9fc;
+        color: #3e5a78;
+
+        justify-content: flex-start;
+
+        box-sizing: border-box;
+    }
+
+    .bc-user-btn > i {
+        margin-left: auto;
+    }
+
+    .bc-user-menu {
+        width: 100%;
+
+        margin-top: 5px;
+
+        position: static;
+
+        border: 0;
+
+        box-shadow: none;
+
+        display: none;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: none;
+
+        box-sizing: border-box;
+    }
+
+    .bc-user.open .bc-user-menu {
+        display: block;
+        transform: none;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .bc-brand-text strong {
+        font-size: 11px;
+    }
+
+    .bc-brand-text span {
+        font-size: 6.5px;
+    }
+
+    .bc-brand-logo {
+        width: 43px !important;
+        height: 43px !important;
+        min-width: 43px !important;
+        max-width: 43px !important;
+    }
+
+}

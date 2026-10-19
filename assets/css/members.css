@@ -1,0 +1,464 @@
+/* members.css
+   ไฟล์นี้ใช้ตกแต่งหน้ารายชื่อสมาชิกชมรม
+*/
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.members-page {
+    min-height: 70vh;
+    padding: 65px 20px 85px;
+    background: #f4f7fb;
+}
+
+.members-container {
+    width: min(1150px, 100%);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.members-heading {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.members-heading > span {
+    color: #2470c8;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.members-heading h1 {
+    margin: 4px 0;
+    color: #13375f;
+    font-size: 29px;
+}
+
+.members-heading p {
+    margin: 0;
+    color: #8b98a8;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.members-summary {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.member-summary-card {
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    text-align: center;
+}
+
+.member-summary-card.main {
+    background: linear-gradient(135deg, #0a4a9b, #1768cf);
+    border-color: transparent;
+}
+
+.member-summary-card span {
+    display: block;
+    color: #8593a5;
+    font-size: 9px;
+}
+
+.member-summary-card strong {
+    display: inline-block;
+    margin-top: 4px;
+    color: #183d69;
+    font-size: 22px;
+}
+
+.member-summary-card small {
+    margin-left: 2px;
+    color: #98a4b2;
+    font-size: 8px;
+}
+
+.member-summary-card.main span,
+.member-summary-card.main strong,
+.member-summary-card.main small {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+.members-filter {
+    margin-bottom: 23px;
+    padding: 13px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.members-search {
+    height: 43px;
+    position: relative;
+    flex: 1;
+}
+
+.members-search i {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #98a4b3;
+    font-size: 11px;
+}
+
+.members-search input {
+    width: 100%;
+    height: 43px;
+    padding: 0 12px 0 38px;
+    border: 1px solid #dbe3ed;
+    border-radius: 8px;
+    outline: none;
+    color: #435d7a;
+    font-family: "Prompt", sans-serif;
+    font-size: 10.5px;
+    box-sizing: border-box;
+}
+
+.members-search input:focus,
+.members-filter select:focus {
+    border-color: #337bd0;
+}
+
+.members-filter select {
+    min-width: 145px;
+    height: 43px;
+    padding: 0 10px;
+    border: 1px solid #dbe3ed;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #536a86;
+    font-family: "Prompt", sans-serif;
+    font-size: 10px;
+}
+
+.members-filter button,
+.members-filter > a {
+    min-height: 43px;
+    padding: 0 15px;
+    border-radius: 8px;
+    font-family: "Prompt", sans-serif;
+    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.members-filter button {
+    border: none;
+    background: #1768cf;
+    color: #ffffff;
+}
+
+.members-filter > a {
+    border: 1px solid #dbe3ed;
+    background: #ffffff;
+    color: #687b91;
+}
+
+
+/* =========================================
+   MEMBER TABLE
+========================================= */
+
+.members-table-card {
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d6e1ee;
+    border-radius: 13px;
+    box-shadow: 0 10px 28px rgba(30, 66, 110, .07);
+    box-sizing: border-box;
+}
+
+.members-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: #b7cce3 #eef4fa;
+    scrollbar-width: thin;
+}
+
+.members-table {
+    width: 100%;
+    min-width: 820px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #526982;
+    font-size: 10.5px;
+}
+
+.members-table .member-col-order {
+    width: 76px;
+}
+
+.members-table .member-col-name {
+    width: 31%;
+}
+
+.members-table .member-col-student-id {
+    width: 19%;
+}
+
+.members-table .member-col-major {
+    width: auto;
+}
+
+.members-table .member-col-year {
+    width: 105px;
+}
+
+.members-table th,
+.members-table td {
+    padding: 10px 18px;
+    border-bottom: 1px solid #e7edf4;
+    text-align: left;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.members-table th {
+    color: #31577f;
+    background: #eaf4ff;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.members-table th + th {
+    border-left: 1px solid rgba(203, 220, 238, .72);
+}
+
+.members-table th:first-child,
+.members-table td:first-child {
+    width: 72px;
+    text-align: center;
+}
+
+.members-table th:last-child,
+.members-table td:last-child {
+    width: 105px;
+    text-align: center;
+}
+
+.members-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.members-table tbody tr:hover {
+    background: #f8fbff;
+}
+
+.members-table td {
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.member-row-number {
+    color: #55708e;
+}
+
+.member-name-cell {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.member-name-cell strong {
+    color: #274b73;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.member-table-avatar {
+    width: 31px;
+    height: 31px;
+    flex: 0 0 31px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    border: 1px solid #d8e4f1;
+    border-radius: 50%;
+    color: #6f91b7;
+    background: #eef5fd;
+    font-size: 12px;
+}
+
+.member-table-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.member-table-year {
+    display: inline-flex;
+    padding: 4px 9px;
+    border-radius: 999px;
+    color: #2366b6;
+    background: #edf5ff;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.member-cell-order,
+.member-cell-student-id,
+.member-cell-year {
+    white-space: nowrap;
+}
+
+.member-cell-major {
+    color: #5d7188;
+}
+
+.members-table-footer {
+    min-height: 58px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid #e4ebf3;
+    color: #718399;
+    font-size: 9px;
+}
+
+.members-pagination {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.members-pagination a {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #dce5f0;
+    border-radius: 7px;
+    color: #5f7691;
+    background: #ffffff;
+    font-size: 9px;
+    text-decoration: none;
+}
+
+.members-pagination a:hover,
+.members-pagination a.current {
+    color: #ffffff;
+    background: #1768cf;
+    border-color: #1768cf;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.members-empty {
+    padding: 55px 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.members-empty > i {
+    color: #bfd0e4;
+    font-size: 35px;
+}
+
+.members-empty h3 {
+    margin: 12px 0 4px;
+    color: #435e7d;
+    font-size: 15px;
+}
+
+.members-empty p {
+    margin: 0;
+    color: #94a0af;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .members-summary {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .members-page {
+        padding: 40px 13px 60px;
+    }
+
+    .members-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .members-filter {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .members-filter select,
+    .members-filter button,
+    .members-filter > a {
+        width: 100%;
+    }
+
+    .members-table-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .members-table {
+        min-width: 760px;
+    }
+
+    .members-table th,
+    .members-table td {
+        padding-right: 13px;
+        padding-left: 13px;
+    }
+}

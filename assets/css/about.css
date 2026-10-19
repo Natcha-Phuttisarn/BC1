@@ -1,0 +1,852 @@
+/* about.css
+   ไฟล์นี้ใช้ตกแต่งหน้าเกี่ยวกับชมรม
+   หน้า about.php, history.php และ goals.php
+*/
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.about-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.about-hero {
+    min-height: 175px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #062d67,
+            #0756b2
+        );
+
+    display: flex;
+    align-items: center;
+}
+
+.about-hero::before {
+    content: "";
+
+    width: 190px;
+    height: 27px;
+
+    position: absolute;
+    top: 8px;
+    right: 145px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,.11);
+
+    transform: rotate(-38deg);
+}
+
+.about-hero::after {
+    content: "";
+
+    width: 105px;
+    height: 27px;
+
+    position: absolute;
+    top: 32px;
+    right: 35px;
+
+    border-radius: 999px;
+
+    background: #ffc928;
+
+    transform: rotate(-38deg);
+}
+
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,29,68,.95),
+            rgba(6,67,139,.58)
+        );
+}
+
+.about-hero-inner {
+    min-height: 175px;
+
+    position: relative;
+    z-index: 2;
+
+    padding: 12px 0;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    box-sizing: border-box;
+}
+
+.about-hero-icon {
+    width: 58px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    border-right:
+        1px solid rgba(255,255,255,.32);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 23px;
+}
+
+.about-hero-text > span {
+    color:
+        rgba(255,255,255,.72);
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 1.4px;
+}
+
+.about-hero-text h1 {
+    margin: 3px 0 2px;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+.about-hero-text p {
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ABOUT INTRO
+========================================= */
+
+.about-intro {
+    padding: 55px 0 30px;
+
+    background: #ffffff;
+}
+
+.about-intro-box {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 26px 30px;
+
+    border:
+        1px solid #e1e8f0;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    display: grid;
+
+    grid-template-columns:
+        120px 1fr;
+
+    align-items: center;
+
+    gap: 28px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(19,56,98,.055);
+}
+
+
+/* =========================================
+   ABOUT LOGO
+========================================= */
+
+.about-intro-logo {
+    width: 110px;
+    height: 110px;
+
+    padding: 9px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf5ff,
+            #e4eefb
+        );
+
+    box-sizing: border-box;
+}
+
+.about-intro-logo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   INTRO TEXT
+========================================= */
+
+.about-intro-text > span {
+    color: #1768cf;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 1.3px;
+}
+
+.about-intro-text h2 {
+    margin: 4px 0 0;
+
+    color: #173e69;
+
+    font-size: 25px;
+    font-weight: 650;
+}
+
+.about-intro-text h3 {
+    margin: 0 0 9px;
+
+    color: #55708d;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.about-intro-text p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #7c8da0;
+
+    font-size: 9.5px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   ABOUT MENU SECTION
+========================================= */
+
+.about-menu {
+    padding: 40px 0 75px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f4f8fc
+        );
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.about-heading {
+    margin-bottom: 31px;
+
+    text-align: center;
+}
+
+.about-heading > span {
+    color: #1768cf;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+.about-heading h2 {
+    margin: 5px 0 7px;
+
+    color: #173e69;
+
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.about-heading-line {
+    width: 105px;
+    height: 3px;
+
+    margin: 0 auto 10px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #1768cf,
+            transparent
+        );
+}
+
+.about-heading p {
+    margin: 0;
+
+    color: #8a98a8;
+
+    font-size: 9.5px;
+}
+
+
+/* =========================================
+   ABOUT CARDS
+========================================= */
+
+.about-grid {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.about-card {
+    min-height: 235px;
+
+    padding: 24px;
+
+    position: relative;
+    overflow: hidden;
+
+    border:
+        1px solid #e1e8f0;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    color: inherit;
+
+    display: flex;
+    flex-direction: column;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 28px
+        rgba(21,61,104,.05);
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+}
+
+.about-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color: #bed4ed;
+
+    box-shadow:
+        0 18px 40px
+        rgba(21,61,104,.10);
+}
+
+
+/* ตัวเลข 01 02 03 */
+
+.about-card-number {
+    position: absolute;
+
+    top: 13px;
+    right: 17px;
+
+    color: #edf2f7;
+
+    font-size: 39px;
+    font-weight: 700;
+}
+
+
+/* Icon */
+
+.about-card-icon {
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 17px;
+
+    position: relative;
+    z-index: 2;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf5ff,
+            #e5f0fd
+        );
+
+    color: #1768cf;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.about-card > span {
+    position: relative;
+    z-index: 2;
+
+    color: #1768cf;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 1.2px;
+}
+
+.about-card h3 {
+    margin: 5px 0 7px;
+
+    position: relative;
+    z-index: 2;
+
+    color: #173f6e;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.about-card p {
+    margin: 0;
+
+    position: relative;
+    z-index: 2;
+
+    color: #8493a5;
+
+    font-size: 9.5px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CARD LINK
+========================================= */
+
+.about-card-link {
+    margin-top: auto;
+    padding-top: 17px;
+
+    color: #1768cf;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    transition: gap .2s ease;
+}
+
+.about-card:hover
+.about-card-link {
+    gap: 11px;
+}
+
+
+/* =========================================
+   DETAIL PAGE
+   history.php + goals.php
+========================================= */
+
+.about-detail {
+    padding: 60px 0 75px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f4f8fc
+        );
+}
+
+.about-detail-box {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 36px;
+
+    border:
+        1px solid #e1e8f0;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px
+        rgba(20,57,96,.055);
+}
+
+
+/* =========================================
+   DETAIL TITLE
+========================================= */
+
+.about-detail-title {
+    margin-bottom: 23px;
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid #e7edf4;
+}
+
+.about-detail-title span {
+    color: #1768cf;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 1.3px;
+}
+
+.about-detail-title h2 {
+    margin: 5px 0 5px;
+
+    color: #173f6e;
+
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.about-detail-title p {
+    margin: 0;
+
+    color: #8493a5;
+
+    font-size: 9.5px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   HISTORY CONTENT
+========================================= */
+
+.about-detail-content p {
+    margin: 0 0 15px;
+
+    color: #6f8297;
+
+    font-size: 10px;
+
+    line-height: 2;
+}
+
+.about-detail-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   GOALS
+========================================= */
+
+.goal-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.goal-item {
+    padding: 15px;
+
+    border:
+        1px solid #e2e9f1;
+
+    border-radius: 12px;
+
+    background: #f8fbff;
+
+    display: grid;
+
+    grid-template-columns:
+        40px 1fr;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    transition: .2s ease;
+}
+
+.goal-item:hover {
+    border-color: #c8daf0;
+
+    background: #f3f8fe;
+
+    transform:
+        translateX(3px);
+}
+
+.goal-item-number {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1768cf,
+            #0e50a2
+        );
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.goal-item p {
+    margin: 0;
+
+    color: #6f8297;
+
+    font-size: 10px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.about-back {
+    margin-top: 27px;
+    padding-top: 21px;
+
+    border-top:
+        1px solid #e5ebf2;
+}
+
+.about-back a {
+    min-height: 41px;
+
+    padding: 0 14px;
+
+    border:
+        1px solid #dbe4ee;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #52708f;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: .2s ease;
+}
+
+.about-back a:hover {
+    border-color: #1768cf;
+
+    background: #f3f8fe;
+
+    color: #1768cf;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .about-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .about-intro-box {
+        max-width: 700px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .about-container {
+        width:
+            calc(100% - 26px);
+    }
+
+
+    /* Hero */
+
+    .about-hero,
+    .about-hero-inner {
+        min-height: 155px;
+    }
+
+    .about-hero-icon {
+        width: 50px;
+        height: 52px;
+
+        font-size: 20px;
+    }
+
+    .about-hero-text h1 {
+        font-size: 25px;
+    }
+
+
+    /* Intro */
+
+    .about-intro {
+        padding:
+            45px 0 25px;
+    }
+
+    .about-intro-box {
+        padding: 24px 20px;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    .about-intro-logo {
+        margin: 0 auto;
+    }
+
+
+    /* Menu */
+
+    .about-menu {
+        padding:
+            35px 0 55px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-heading h2 {
+        font-size: 23px;
+    }
+
+
+    /* Detail */
+
+    .about-detail {
+        padding:
+            45px 0 55px;
+    }
+
+    .about-detail-box {
+        padding:
+            24px 18px;
+    }
+
+    .about-detail-title h2 {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .goal-item {
+        grid-template-columns:
+            36px 1fr;
+
+        padding: 13px;
+    }
+
+    .goal-item-number {
+        width: 36px;
+        height: 36px;
+    }
+
+}

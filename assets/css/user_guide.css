@@ -1,0 +1,270 @@
+/* user_guide.css
+   ใช้เฉพาะหน้าวิธีการใช้งานระบบ
+*/
+
+.user-guide-page {
+    min-height: 70vh;
+    color: #18385f;
+    background: #ffffff;
+}
+
+.user-guide-page .user-guide-container {
+    width: min(1180px, calc(100% - 64px));
+    margin: 0 auto;
+}
+
+.user-guide-page .user-guide-hero {
+    min-height: 185px;
+    padding: 42px 0 38px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 70% 68%, rgba(98, 169, 247, .18) 0 8px, transparent 9px),
+        radial-gradient(circle at 87% 35%, rgba(98, 169, 247, .18) 0 7px, transparent 8px),
+        linear-gradient(120deg, #f8fbff 0%, #eff7ff 58%, #dcecff 100%);
+}
+
+.user-guide-page .user-guide-hero::before,
+.user-guide-page .user-guide-hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.user-guide-page .user-guide-hero::before {
+    right: 4%;
+    bottom: -145px;
+    width: 310px;
+    height: 310px;
+    border: 36px solid rgba(92, 157, 234, .1);
+}
+
+.user-guide-page .user-guide-hero::after {
+    right: 31%;
+    top: 46px;
+    width: 72px;
+    height: 72px;
+    background: rgba(117, 182, 248, .1);
+}
+
+.user-guide-page .user-guide-hero .user-guide-container {
+    position: relative;
+    z-index: 1;
+}
+
+.user-guide-page .user-guide-kicker {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #2775cf;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .7px;
+}
+
+.user-guide-page .user-guide-kicker::after {
+    content: "";
+    width: 34px;
+    height: 2px;
+    border-radius: 999px;
+    background: #6db0f5;
+}
+
+.user-guide-page .user-guide-hero h1 {
+    margin: 0;
+    color: #092c61;
+    font-size: clamp(33px, 4vw, 45px);
+    line-height: 1.25;
+}
+
+.user-guide-page .user-guide-hero p {
+    margin: 7px 0 0;
+    color: #6f8095;
+    font-size: 13px;
+}
+
+.user-guide-page .user-guide-content {
+    padding: 28px 0 70px;
+}
+
+.user-guide-page .guide-section-heading {
+    margin: 0 0 17px;
+    padding-left: 13px;
+    border-left: 4px solid #2f82e5;
+}
+
+.user-guide-page .guide-section-heading h2 {
+    margin: 0;
+    color: #113b70;
+    font-size: 21px;
+}
+
+.user-guide-page .guide-section-heading p {
+    margin: 3px 0 0;
+    color: #7a8a9e;
+    font-size: 10.5px;
+}
+
+.user-guide-page .guide-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.user-guide-page .guide-step-card {
+    min-height: 134px;
+    padding: 17px;
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+    border: 1px solid #e2eaf4;
+    border-radius: 11px;
+    background: #ffffff;
+    box-shadow: 0 8px 22px rgba(27, 67, 117, .05);
+}
+
+.user-guide-page .guide-step-icon {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    color: #2680df;
+    background: #edf6ff;
+    font-size: 21px;
+}
+
+.user-guide-page .guide-step-copy {
+    position: relative;
+    padding-left: 29px;
+}
+
+.user-guide-page .guide-step-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #1976d8;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.user-guide-page .guide-step-card h3 {
+    margin: 1px 0 5px;
+    color: #143b6d;
+    font-size: 12px;
+}
+
+.user-guide-page .guide-step-card p {
+    margin: 0;
+    color: #7b899b;
+    font-size: 9.5px;
+    line-height: 1.65;
+}
+
+.user-guide-page .guide-advice-heading {
+    margin-top: 27px;
+}
+
+.user-guide-page .guide-advice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.user-guide-page .guide-advice-card {
+    padding: 17px;
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 13px;
+    border-radius: 11px;
+    background: #f2f8ff;
+}
+
+.user-guide-page .guide-advice-icon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: #2675ce;
+    background: #ffffff;
+    font-size: 17px;
+}
+
+.user-guide-page .guide-advice-card h3 {
+    margin: 0 0 4px;
+    color: #1b4575;
+    font-size: 11px;
+}
+
+.user-guide-page .guide-advice-card p {
+    margin: 0;
+    color: #74869b;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.user-guide-page .guide-quick-links {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.user-guide-page .guide-quick-links a {
+    min-height: 39px;
+    padding: 8px 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid #d7e5f4;
+    border-radius: 9px;
+    color: #225d9e;
+    background: #ffffff;
+    font-size: 10px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.user-guide-page .guide-quick-links a:hover {
+    border-color: #8bb8e9;
+    background: #f5f9ff;
+}
+
+@media (max-width: 900px) {
+    .user-guide-page .guide-steps,
+    .user-guide-page .guide-advice-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .user-guide-page .user-guide-container {
+        width: calc(100% - 34px);
+    }
+
+    .user-guide-page .user-guide-hero {
+        min-height: 170px;
+        padding: 38px 0 34px;
+    }
+
+    .user-guide-page .guide-steps,
+    .user-guide-page .guide-advice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .user-guide-page .guide-step-card {
+        min-height: 0;
+    }
+}

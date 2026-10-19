@@ -1,0 +1,678 @@
+/* =========================================
+   goals.css
+   หน้านี้ใช้สำหรับตกแต่งหน้าวัตถุประสงค์ของชมรม
+========================================= */
+
+.goals-page {
+    background: #f7faff;
+    color: #18345e;
+}
+
+.goals-container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.goals-hero {
+    padding: 28px 0 42px;
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f4f8fe 100%
+        );
+    border-bottom: 1px solid #edf2f8;
+}
+
+.goals-breadcrumb {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    color: #91a0b5;
+
+    font-size: 11px;
+}
+
+.goals-breadcrumb a {
+    color: #8394aa;
+    text-decoration: none;
+}
+
+.goals-breadcrumb a:hover {
+    color: #1769cc;
+}
+
+.goals-breadcrumb strong {
+    color: #1769cc;
+    font-weight: 600;
+}
+
+.goals-breadcrumb i {
+    color: #b1bdcc;
+    font-size: 8px;
+}
+
+
+/* Hero เหลือฝั่งเดียว */
+
+.goals-hero-grid {
+    display: block;
+}
+
+.goals-hero-content {
+    width: 100%;
+    max-width: 760px;
+
+    padding: 12px 0 18px;
+}
+
+.goals-label {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: #27518e;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+.goals-hero-content h1 {
+    margin: 0;
+
+    color: #123b6d;
+
+    font-size: 44px;
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+.goals-hero-content h2 {
+    margin: 3px 0 13px;
+
+    color: #2d7df0;
+
+    font-size: 31px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.goals-hero-text {
+    width: 100%;
+    max-width: 620px;
+
+    margin: 0;
+
+    color: #294c79;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    line-height: 1.8;
+}
+
+
+/* ซ่อนส่วนรูปด้านขวาบนที่ไม่ใช้แล้ว */
+
+.goals-hero-visual,
+.goals-hero-photo,
+.goals-hero-overlay-text,
+.goals-hero-side-text {
+    display: none !important;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.goals-intro-section {
+    padding: 30px 0 18px;
+}
+
+.goals-intro-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        215px;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.goals-intro-left {
+    min-width: 0;
+}
+
+.goals-intro-head {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 11px;
+}
+
+.goals-intro-icon {
+    position: relative;
+
+    width: 56px;
+    height: 56px;
+
+    flex: 0 0 56px;
+
+    display: grid;
+    place-items: center;
+
+    color: #1672df;
+    background: #eaf3ff;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+.goals-intro-icon::after {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    bottom: -10px;
+
+    width: 48px;
+    height: 3px;
+
+    background: #2780eb;
+
+    border-radius: 999px;
+}
+
+.goals-intro-label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #8ea4bf;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+}
+
+.goals-intro-head h2 {
+    margin: 0;
+
+    color: #153d70;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.goals-intro-text {
+    width: 100%;
+    max-width: 820px;
+
+    margin: 0;
+
+    color: #657a95;
+
+    font-size: 12px;
+
+    line-height: 1.85;
+}
+
+
+/* ข้อความขวา */
+
+.goals-intro-right {
+    text-align: right;
+}
+
+.goals-intro-right span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #9aabc1;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.goals-intro-right p {
+    margin: 0;
+
+    color: #a6b8d0;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   GOALS GRID
+========================================= */
+
+.goals-list-section {
+    padding: 2px 0 32px;
+}
+
+.goals-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.goal-card {
+    min-height: 132px;
+
+    padding: 20px 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        66px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e9f4;
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(21, 71, 134, 0.035);
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        border-color .18s ease;
+}
+
+.goal-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #cbdff7;
+
+    box-shadow:
+        0 10px 28px
+        rgba(21, 71, 134, 0.065);
+}
+
+
+/* ไอคอน */
+
+.goal-icon {
+    width: 58px;
+    height: 58px;
+
+    display: grid;
+    place-items: center;
+
+    color: #1772df;
+    background: #eaf3ff;
+
+    border-radius: 50%;
+
+    font-size: 23px;
+}
+
+
+/* เนื้อหา */
+
+.goal-content {
+    min-width: 0;
+}
+
+.goal-content h3 {
+    margin: 0 0 5px;
+
+    color: #153f76;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.45;
+}
+
+.goal-content p {
+    margin: 0;
+
+    color: #697e99;
+
+    font-size: 11.5px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   QUOTE SECTION
+========================================= */
+
+.goals-quote-section {
+    padding: 8px 0 55px;
+}
+
+.goals-quote-box {
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        1fr
+        190px;
+
+    align-items: stretch;
+
+    min-height: 220px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            115deg,
+            #76a9ea 0%,
+            #1c67c8 42%,
+            #092f63 100%
+        );
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 38px
+        rgba(13, 55, 110, 0.12);
+}
+
+
+/* รูปด้านล่าง */
+
+.goals-quote-image {
+    position: relative;
+
+    min-height: 220px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.08),
+            rgba(3,39,86,.25)
+        ),
+        url('../images/goal-team.jpg')
+        center / cover no-repeat;
+}
+
+.goals-quote-handwrite {
+    position: absolute;
+
+    top: 22px;
+    left: 25px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-style: italic;
+
+    line-height: 1.55;
+
+    text-shadow:
+        0 3px 10px
+        rgba(0,0,0,.20);
+}
+
+
+/* Quote กลาง */
+
+.goals-quote-content {
+    padding: 30px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #ffffff;
+}
+
+.quote-mark {
+    margin-bottom: 8px;
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 20px;
+}
+
+.goals-quote-content h2 {
+    margin: 0 0 12px;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+.goals-quote-content span {
+    color: #b8d4f7;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 1.3px;
+}
+
+
+/* จุดด้านขวา */
+
+.goals-quote-points {
+    padding: 25px 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 15px;
+
+    border-left:
+        1px solid rgba(255,255,255,.16);
+}
+
+.quote-point {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.quote-point i {
+    width: 24px;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .goals-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .goals-intro-right {
+        display: none;
+    }
+
+    .goals-quote-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .goals-quote-points {
+        grid-column: 1 / -1;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        border-left: 0;
+
+        border-top:
+            1px solid rgba(255,255,255,.16);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .goals-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .goals-hero-content h2 {
+        font-size: 27px;
+    }
+
+    .goals-quote-box {
+        grid-template-columns: 1fr;
+    }
+
+    .goals-quote-image {
+        min-height: 230px;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .goals-container {
+        width: calc(100% - 28px);
+    }
+
+    .goals-hero {
+        padding:
+            22px 0
+            32px;
+    }
+
+    .goals-breadcrumb {
+        margin-bottom: 22px;
+    }
+
+    .goals-hero-content h1 {
+        font-size: 31px;
+    }
+
+    .goals-hero-content h2 {
+        font-size: 23px;
+    }
+
+    .goals-hero-text {
+        font-size: 12px;
+    }
+
+    .goals-intro-head {
+        align-items: flex-start;
+    }
+
+    .goals-intro-icon {
+        width: 50px;
+        height: 50px;
+
+        flex-basis: 50px;
+
+        font-size: 20px;
+    }
+
+    .goals-intro-icon::after {
+        width: 42px;
+    }
+
+    .goals-intro-head h2 {
+        font-size: 21px;
+    }
+
+    .goal-card {
+        min-height: auto;
+
+        padding: 18px;
+
+        grid-template-columns:
+            52px
+            minmax(0, 1fr);
+
+        gap: 13px;
+    }
+
+    .goal-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 19px;
+    }
+
+    .goal-content h3 {
+        font-size: 14px;
+    }
+
+    .goal-content p {
+        font-size: 11px;
+    }
+
+    .goals-quote-content {
+        padding: 26px 22px;
+    }
+
+    .goals-quote-content h2 {
+        font-size: 20px;
+    }
+
+}

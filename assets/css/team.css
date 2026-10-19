@@ -1,0 +1,953 @@
+/* team.css
+   ไฟล์นี้ใช้สำหรับตกแต่งหน้าบุคลากรชมรม
+*/
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.team-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+   ลดพื้นที่ว่างบนและล่างแล้ว
+========================================= */
+
+.team-hero {
+    min-height: 175px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #062d67,
+            #0756b2
+        );
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ลายตกแต่ง */
+
+.team-hero::before {
+    content: "";
+
+    width: 190px;
+    height: 27px;
+
+    position: absolute;
+    top: 8px;
+    right: 145px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.11);
+
+    transform: rotate(-38deg);
+}
+
+
+.team-hero::after {
+    content: "";
+
+    width: 105px;
+    height: 27px;
+
+    position: absolute;
+    top: 32px;
+    right: 35px;
+
+    border-radius: 999px;
+
+    background: #ffc928;
+
+    transform: rotate(-38deg);
+}
+
+
+.team-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 29, 68, 0.95),
+            rgba(6, 67, 139, 0.58)
+        );
+}
+
+
+/* เนื้อหา */
+
+.team-hero-inner {
+    min-height: 175px;
+
+    position: relative;
+    z-index: 2;
+
+    padding: 12px 0;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    box-sizing: border-box;
+}
+
+
+/* Icon */
+
+.team-hero-icon {
+    width: 58px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    border-right:
+        1px solid
+        rgba(255, 255, 255, 0.32);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 23px;
+}
+
+
+/* Label */
+
+.team-hero-text > span {
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 1.4px;
+}
+
+
+/* ชื่อ */
+
+.team-hero-text h1 {
+    margin: 3px 0 2px;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* Description */
+
+.team-hero-text p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 9px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.team-section {
+    padding: 65px 0;
+    background: #ffffff;
+}
+
+
+.committee-section {
+    background:
+        linear-gradient(
+            180deg,
+            #f7faff,
+            #f1f6fc
+        );
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.team-heading {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+
+.team-heading > span {
+    color: #1768cf;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+
+.team-heading h2 {
+    margin: 5px 0 8px;
+
+    color: #123865;
+
+    font-size: 28px;
+}
+
+
+.team-heading-line {
+    width: 115px;
+    height: 3px;
+
+    margin: 0 auto 11px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #1768cf,
+            transparent
+        );
+}
+
+
+.team-heading p {
+    margin: 0;
+
+    color: #8997a8;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   ADVISOR
+========================================= */
+
+.advisor-list {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    gap: 18px;
+}
+
+
+.advisor-card {
+    padding: 25px;
+
+    border:
+        1px solid #e1e8f0;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    display: grid;
+
+    grid-template-columns:
+        180px 1fr;
+
+    align-items: center;
+
+    gap: 27px;
+
+    box-shadow:
+        0 12px 34px
+        rgba(17, 52, 92, 0.07);
+}
+
+
+.advisor-photo {
+    width: 160px;
+    height: 160px;
+
+    margin: 0 auto;
+
+    position: relative;
+}
+
+
+.advisor-photo img {
+    width: 100%;
+    height: 100%;
+
+    border:
+        8px solid #edf4fd;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background: #edf4fd;
+
+    box-sizing: border-box;
+}
+
+
+.person-photo-icon {
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+
+    left: 4px;
+    bottom: 8px;
+
+    border:
+        4px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: #1768cf;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   POSITION
+========================================= */
+
+.person-position {
+    display: inline-flex;
+
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    background: #edf4fd;
+
+    color: #1768cf;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PERSON INFO
+========================================= */
+
+.advisor-info h3,
+.committee-info h3 {
+    margin: 9px 0 7px;
+
+    color: #173e69;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.person-department {
+    margin: 0 0 7px;
+
+    color: #55708d;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+.person-department.center {
+    text-align: center;
+}
+
+
+.person-department i {
+    margin-right: 5px;
+
+    color: #3476c5;
+}
+
+
+.person-description {
+    max-width: 580px;
+
+    margin: 0;
+
+    color: #8291a3;
+
+    font-size: 9.5px;
+
+    line-height: 1.8;
+}
+
+
+.person-description.center {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.person-contact {
+    margin-top: 13px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px 16px;
+}
+
+
+.person-contact.center {
+    justify-content: center;
+}
+
+
+.person-contact a {
+    color: #506b87;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 9px;
+
+    text-decoration: none;
+}
+
+
+.person-contact a i {
+    color: #3476c5;
+}
+
+
+.person-contact a:hover {
+    color: #1768cf;
+}
+
+
+/* =========================================
+   COMMITTEE
+========================================= */
+
+.committee-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.committee-card {
+    padding: 26px 20px;
+
+    border:
+        1px solid #e1e8f0;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.committee-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 36px
+        rgba(17, 52, 92, 0.09);
+}
+
+
+.committee-photo {
+    width: 135px;
+    height: 135px;
+
+    margin:
+        0 auto 15px;
+
+    position: relative;
+}
+
+
+.committee-photo img {
+    width: 100%;
+    height: 100%;
+
+    border:
+        7px solid #edf4fd;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background: #edf4fd;
+
+    box-sizing: border-box;
+}
+
+
+.committee-icon {
+    width: 38px;
+    height: 38px;
+
+    position: absolute;
+
+    left: 3px;
+    bottom: 6px;
+
+    border:
+        4px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: #1768cf;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+
+    box-sizing: border-box;
+}
+
+
+.committee-info h3 {
+    font-size: 15px;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.team-empty {
+    padding: 50px 20px;
+
+    border:
+        1px dashed #ccd8e6;
+
+    border-radius: 17px;
+
+    background: #f9fbfd;
+
+    text-align: center;
+}
+
+
+.team-empty-icon {
+    width: 62px;
+    height: 62px;
+
+    margin:
+        0 auto 12px;
+
+    border-radius: 50%;
+
+    background: #eaf3fd;
+
+    color: #3476c5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+.team-empty h3 {
+    margin: 0 0 5px;
+
+    color: #3c5876;
+
+    font-size: 14px;
+}
+
+
+.team-empty p {
+    margin: 0;
+
+    color: #909cab;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.team-bottom {
+    padding:
+        25px 0 65px;
+
+    background: #f1f6fc;
+}
+
+
+.team-bottom-inner {
+    padding-top: 23px;
+
+    border-top:
+        1px solid #dfe6ef;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.team-bottom a {
+    min-height: 42px;
+
+    padding: 0 14px;
+
+    border:
+        1px solid #d9e2ec;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #4b6682;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 9.5px;
+
+    text-decoration: none;
+}
+
+
+.team-bottom a:hover {
+    border-color: #1768cf;
+
+    color: #1768cf;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 950px) {
+
+    .committee-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .team-hero {
+        min-height: 155px;
+    }
+
+    .team-hero-inner {
+        min-height: 155px;
+    }
+
+    .team-hero-icon {
+        width: 50px;
+        height: 52px;
+
+        font-size: 20px;
+    }
+
+    .team-hero-text h1 {
+        font-size: 26px;
+    }
+
+    .advisor-card {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .person-contact {
+        justify-content: center;
+    }
+
+    .person-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .team-container {
+        width:
+            calc(100% - 26px);
+    }
+
+    .team-section {
+        padding:
+            48px 0;
+    }
+
+    .committee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-heading h2 {
+        font-size: 23px;
+    }
+
+    .advisor-photo {
+        width: 145px;
+        height: 145px;
+    }
+
+    .team-bottom-inner {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 8px;
+    }
+
+    .team-bottom a {
+        width: 100%;
+
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* =========================================
+   ADVISOR CARDS — scoped to the advisor section
+========================================= */
+
+.advisor-section .advisor-list {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 360px));
+    align-items: stretch;
+    justify-content: center;
+    gap: 22px;
+}
+
+.advisor-section .team-container {
+    width: 100%;
+    max-width: 1180px;
+    padding-right: 13px;
+    padding-left: 13px;
+    box-sizing: border-box;
+}
+
+.advisor-section .advisor-card {
+    min-width: 0;
+    height: 100%;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border: 1px solid #e2eaf3;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 8px 24px rgba(17, 52, 92, 0.07);
+    box-sizing: border-box;
+}
+
+.advisor-section .advisor-photo {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    margin: 0;
+    overflow: hidden;
+}
+
+.advisor-section .advisor-photo img {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 100%;
+    border: 0;
+    border-radius: 9px;
+    object-fit: cover;
+    object-position: center 24%;
+}
+
+.advisor-section .advisor-photo .person-photo-icon {
+    display: none;
+}
+
+.advisor-section .advisor-info {
+    min-width: 0;
+    flex: 1;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.advisor-section .person-position {
+    max-width: 100%;
+    padding: 6px 11px;
+    border-radius: 999px;
+    background: #edf4fd;
+    color: #1768cf;
+    white-space: normal;
+}
+
+.advisor-section .advisor-info h3 {
+    margin: 12px 0 10px;
+    color: #173e69;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.advisor-section .person-department {
+    margin: 0;
+    padding: 10px 0;
+    border-top: 1px solid #e5edf5;
+    color: #55708d;
+    font-size: 13px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+.advisor-section .person-description {
+    max-width: none;
+    margin: 0;
+    padding: 8px 0;
+    color: #8291a3;
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.advisor-section .person-contact {
+    margin-top: 5px;
+    padding-top: 10px;
+    border-top: 1px solid #e5edf5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.advisor-section .person-contact a {
+    min-width: 0;
+    max-width: 100%;
+    color: #315982;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 950px) {
+    .advisor-section .advisor-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: stretch;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .advisor-section .team-container {
+        width: calc(100vw - 26px);
+        max-width: none;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .advisor-section .advisor-list,
+    .advisor-section .advisor-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .advisor-section .advisor-card {
+        width: calc(100vw - 52px);
+        text-align: left;
+    }
+
+    .advisor-section .advisor-photo {
+        width: min(100%, 330px);
+        max-width: calc(100vw - 60px);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .advisor-section .advisor-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .advisor-section .team-container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .advisor-section .advisor-list {
+        gap: 16px;
+    }
+
+    .advisor-section .advisor-card {
+        padding: 14px;
+    }
+}

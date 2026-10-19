@@ -1,0 +1,253 @@
+/* ==========================================
+   FOOTER
+========================================== */
+
+.main-footer {
+    width: 100%;
+    background: linear-gradient(
+        135deg,
+        #06265d 0%,
+        #03183f 100%
+    );
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.footer-container {
+    width: min(1400px, calc(100% - 80px));
+
+    margin: 0 auto;
+
+    padding: 55px 0 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        0.7fr
+        1.2fr
+        0.7fr;
+
+    gap: 70px;
+}
+
+
+/* ==========================================
+   BRAND
+========================================== */
+
+.footer-brand-header {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 17px;
+}
+
+
+.footer-logo {
+    width: 64px;
+    height: 64px;
+
+    object-fit: contain;
+}
+
+
+.footer-brand-text h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.footer-brand-text p {
+    margin: 2px 0 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 12px;
+}
+
+
+.footer-description {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   COLUMN
+========================================== */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 11px;
+}
+
+
+.footer-column h4 {
+    margin: 0 0 7px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.footer-column a {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+
+.footer-column a:hover {
+    color: #ffc928;
+
+    transform: translateX(3px);
+}
+
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.footer-contact-item i {
+    width: 17px;
+
+    margin-top: 4px;
+
+    color: #ffc928;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   SOCIAL ICON
+========================================== */
+
+.footer-column a i {
+    width: 17px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   FOOTER BOTTOM
+========================================== */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.footer-bottom-container {
+    width: min(1400px, calc(100% - 80px));
+
+    margin: 0 auto;
+
+    padding: 18px 0;
+
+    text-align: center;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.50);
+
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+        width: calc(100% - 50px);
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 40px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+    .footer-container {
+        width: calc(100% - 34px);
+
+        padding: 40px 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+    }
+
+
+    .footer-bottom-container {
+        width: calc(100% - 34px);
+    }
+
+
+    .footer-logo {
+        width: 58px;
+        height: 58px;
+    }
+
+}

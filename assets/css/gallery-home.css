@@ -1,0 +1,167 @@
+/* gallery-home.css
+   ไฟล์นี้ใช้ตกแต่งเฉพาะ Section ภาพกิจกรรมที่ผ่านมาในหน้าแรก */
+
+.gallery-section {
+    width: 100%;
+    padding: 0 0 80px;
+    background: #ffffff;
+}
+
+.gallery-container {
+    width: min(1400px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.gallery-header {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.gallery-label {
+    margin-bottom: 7px;
+    color: #1764d3;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.gallery-title {
+    margin: 0;
+    color: #08275e;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.gallery-subtext {
+    margin-top: 7px;
+    color: #718299;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.gallery-all-btn {
+    height: 43px;
+    padding: 0 17px;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #24549a;
+    border-radius: 10px;
+    color: #123e7e;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.gallery-all-btn:hover {
+    background: #073a97;
+    color: #ffffff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.gallery-card {
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e8edf4;
+    border-radius: 14px;
+    box-shadow: 0 7px 25px rgba(17, 43, 83, 0.09);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 35px rgba(17, 43, 83, 0.14);
+}
+
+.gallery-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #edf3fc;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+.gallery-card:hover .gallery-image img {
+    transform: scale(1.035);
+}
+
+.gallery-info {
+    padding: 15px 18px 17px;
+}
+
+.gallery-date {
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #65748c;
+    font-size: 10px;
+}
+
+.gallery-date i {
+    color: #3261a7;
+}
+
+.gallery-info h3 {
+    overflow: hidden;
+    display: -webkit-box;
+    color: #09285f;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.gallery-info p {
+    margin-top: 5px;
+    overflow: hidden;
+    display: -webkit-box;
+    color: #6c788a;
+    font-size: 11px;
+    line-height: 1.7;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+@media (max-width: 1050px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .gallery-section {
+        padding-bottom: 60px;
+    }
+
+    .gallery-container {
+        width: calc(100% - 34px);
+    }
+
+    .gallery-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
